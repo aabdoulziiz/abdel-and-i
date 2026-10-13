@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Abdel & I — portfolio créatif, montage vidéo, gaming et apprentissage du code.">
+  <title>Abdel & I — Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090b12;--panel:#10131e;--text:#f2f4ff;--muted:#9ca3ba;--cyan:#6ef7e8;--purple:#a58bff;--line:rgba(255,255,255,.11);--mono:"DM Mono",monospace;--sans:"Space Grotesk",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:radial-gradient(ellipse at 78% 4%,rgba(109,85,255,.13),transparent 33%),radial-gradient(ellipse at 8% 36%,rgba(53,255,223,.07),transparent 30%),var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 42px));margin:auto}.mono{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;color:var(--cyan)}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:700;font-size:1.05rem;letter-spacing:-.04em}.logo span{color:var(--cyan)}.navlinks{display:flex;gap:27px;color:var(--muted);font-size:.88rem}.navlinks a:hover{color:var(--cyan)}.nav-cta{border:1px solid rgba(110,247,232,.5);padding:11px 15px;border-radius:5px;color:var(--cyan);font-size:.82rem}
+    .hero{min-height:calc(88vh - 76px);display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:52px;padding:85px 0 90px}.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:25px}.dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.93;letter-spacing:-.085em;margin:0 0 26px;font-weight:700}h1 .outline{color:transparent;-webkit-text-stroke:1px rgba(242,244,255,.68)}h1 .glow{color:var(--cyan);text-shadow:0 0 35px rgba(110,247,232,.2)}.intro{font-size:1.08rem;line-height:1.8;color:var(--muted);max-width:530px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:31px}.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:5px;font-weight:600;font-size:.9rem;transition:.2s}.btn.primary{background:var(--cyan);color:#07100f}.btn.primary:hover{transform:translateY(-3px);box-shadow:0 9px 35px #6ef7e833}.btn.secondary{border:1px solid var(--line);color:var(--text)}.btn.secondary:hover{border-color:var(--purple)}.hero-art{position:relative;min-height:400px;display:grid;place-items:center}.orb{width:min(330px,72vw);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 30%,#252a43,#121522 52%,#0a0c13 72%);border:1px solid rgba(165,139,255,.38);box-shadow:0 0 80px rgba(117,91,255,.12),inset 0 0 65px rgba(110,247,232,.05);display:grid;place-items:center;animation:float 6s ease-in-out infinite}.orb:before,.orb:after{content:"";position:absolute;inset:-22px;border:1px solid rgba(110,247,232,.25);border-radius:50%;transform:rotate(-25deg) scaleY(.35)}.orb:after{inset:-43px;border-color:rgba(165,139,255,.3);transform:rotate(38deg) scaleY(.35)}.orb-mark{font-size:6.8rem;font-weight:700;letter-spacing:-.13em;color:var(--text);text-shadow:0 0 38px #6ef7e855}.orb-mark span{color:var(--cyan)}.float-tag{position:absolute;padding:11px 14px;background:rgba(16,19,30,.9);border:1px solid var(--line);border-radius:6px;font-family:var(--mono);font-size:.72rem;color:var(--muted);backdrop-filter:blur(12px)}.tag-one{top:45px;right:0}.tag-two{bottom:48px;left:0}.tag-three{bottom:5px;right:20px;color:var(--cyan)}@keyframes float{50%{transform:translateY(-12px)}}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:17px 0;color:#b5bbce;font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;white-space:nowrap}.ticker span{margin:0 25px}.ticker b{color:var(--cyan);font-weight:400}
+    section{padding:105px 0}.section-top{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:38px}.section-top h2{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:-.07em;line-height:1;margin:12px 0 0}.section-top p{max-width:360px;color:var(--muted);line-height:1.7;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:25px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:9px;min-height:255px;transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-5px);border-color:rgba(110,247,232,.45)}.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:38px}.iconbox{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(110,247,232,.25);border-radius:8px;color:var(--cyan);font-size:1.25rem}.card-number{font-family:var(--mono);color:#6f758a;font-size:.75rem}.card h3{font-size:1.35rem;margin:0 0 12px;letter-spacing:-.04em}.card p{color:var(--muted);font-size:.92rem;line-height:1.7;margin:0}
+    .about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:65px;align-items:start}.about-stamp{padding:28px;border:1px solid var(--line);border-radius:9px;background:linear-gradient(145deg,#151a2b,#0c0f17)}.stamp{font-size:4.4rem;font-weight:700;letter-spacing:-.1em;color:var(--cyan)}.about-stamp p{color:var(--muted);line-height:1.7}.about-copy h2{font-size:clamp(2.4rem,5vw,4.2rem);line-height:1;letter-spacing:-.07em;margin:13px 0 24px}.about-copy>p{font-size:1rem;line-height:1.9;color:var(--muted)}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.chip{font-family:var(--mono);font-size:.7rem;border:1px solid var(--line);padding:9px 11px;border-radius:4px;color:#c7cbe0}
+    .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.project{overflow:hidden;border:1px solid var(--line);border-radius:9px;background:var(--panel)}.project-visual{height:210px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,rgba(110,247,232,.2),transparent 60%),linear-gradient(135deg,#171c30,#0b0e17)}.project:nth-child(2) .project-visual{background:radial-gradient(ellipse at 80% 15%,rgba(165,139,255,.25),transparent 45%),linear-gradient(135deg,#191429,#0b0e17)}.project:nth-child(3) .project-visual{background:radial-gradient(ellipse at 20% 20%,rgba(110,247,232,.17),transparent 50%),linear-gradient(135deg,#102020,#0b0e17)}.project:nth-child(4) .project-visual{background:radial-gradient(ellipse at 80% 90%,rgba(165,139,255,.22),transparent 50%),linear-gradient(135deg,#191a2c,#0b0e17)}.visual-type{font-size:clamp(2rem,5vw,3.8rem);font-weight:700;letter-spacing:-.08em;color:#f1f4ff}.visual-type span{color:var(--cyan)}.visual-grid{position:absolute;inset:0;background:linear-gradient(transparent 96%,rgba(255,255,255,.08) 96%),linear-gradient(90deg,transparent 96%,rgba(255,255,255,.08) 96%);background-size:24px 24px;opacity:.4;mask-image:radial-gradient(ellipse,black,transparent 72%)}.project-info{padding:22px}.project-info small{font-family:var(--mono);color:var(--cyan);font-size:.67rem;text-transform:uppercase;letter-spacing:.1em}.project-info h3{margin:10px 0;font-size:1.25rem}.project-info p{color:var(--muted);line-height:1.65;font-size:.9rem;margin:0}
+    .contact{padding:72px;border:1px solid rgba(110,247,232,.25);border-radius:12px;background:radial-gradient(ellipse at 100% 0,rgba(165,139,255,.13),transparent 45%),linear-gradient(135deg,rgba(110,247,232,.06),rgba(255,255,255,.015));display:flex;justify-content:space-between;align-items:center;gap:35px}.contact h2{font-size:clamp(2.5rem,5vw,4.7rem);line-height:.98;letter-spacing:-.08em;margin:14px 0}.contact p{color:var(--muted);line-height:1.7;max-width:470px}.contact-actions{display:flex;flex-direction:column;gap:12px;min-width:180px}
+    footer{padding:30px 0 38px;border-top:1px solid var(--line);color:#858ba2;font-size:.78rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner b{color:var(--text)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:5px;padding:8px 11px;font-size:1.1rem}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:75px 0 65px;gap:20px}.hero-art{min-height:340px}.orb{width:250px}.orb-mark{font-size:5.5rem}.tag-one{right:7%}.tag-two{left:3%}.cards{grid-template-columns:1fr}.card{min-height:unset}.card-head{margin-bottom:24px}.about-grid{grid-template-columns:1fr;gap:28px}.about-stamp{max-width:420px}.contact{padding:35px;flex-direction:column;align-items:flex-start}.contact-actions{flex-direction:row;flex-wrap:wrap}.section-top{align-items:flex-start;flex-direction:column}.project-grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;padding:20px 22px;background:#0b0d15;border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.navlinks.open{display:flex}.menu-toggle{display:block}.nav-cta{display:none}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home">Abdel <span>&</span> I<span>.</span></a>
+    <nav class="navlinks" id="navlinks" aria-label="Navigation principale">
+      <a href="#work">Projets</a><a href="#about">À propos</a><a href="#skills">Compétences</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Parlons ensemble ↗</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main id="home">
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow mono"><span class="dot"></span> Portfolio créatif · Abidjan, CI</div>
+      <h1>Créer.<br><span class="outline">Apprendre.</span><br><span class="glow">Évoluer.</span></h1>
+      <p class="intro">Moi, c’est Abdel. Passionné par le montage vidéo, le gaming et les technologies. Je construis mes idées, une création à la fois.</p>
+      <div class="actions"><a class="btn primary" href="#work">Découvrir mes projets <span>↘</span></a><a class="btn secondary" href="#about">Qui suis-je ?</a></div>
+    </div>
+    <div class="hero-art" aria-label="Illustration graphique Abdel et I">
+      <div class="orb"><div class="orb-mark">A<span>&</span>I</div></div>
+      <div class="float-tag tag-one">CREATIVE_MODE.exe</div><div class="float-tag tag-two">STATUS: LEARNING ↗</div><div class="float-tag tag-three">v.01 — 2026</div>
+    </div>
+  </div>
+  <div class="ticker"><div class="wrap"><b>✳</b><span>VIDEO EDITING</span> / <span>GAMING</span> / <span>TECH</span> / <span>CODE IN PROGRESS</span> / <span>CREATIVITY FIRST</span> / <b>✳</b></div></div>
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-top reveal"><div><div class="mono">01 / Ce que je fais</div><h2>Mes univers<span style="color:var(--cyan)">.</span></h2></div><p>Je transforme ma curiosité en projets concrets. Voilà les domaines que j’explore et dans lesquels je veux progresser.</p></div>
+      <div class="cards">
+        <article class="card reveal"><div class="card-head"><div class="iconbox">✳</div><span class="card-number">01 — EDIT</span></div><h3>Montage vidéo</h3><p>Des montages dynamiques, des ambiances visuelles et des edits qui racontent quelque chose. CapCut, InShot et Kdenlive.</p></article>
+        <article class="card reveal"><div class="card-head"><div class="iconbox">⌘</div><span class="card-number">02 — PLAY</span></div><h3>Gaming & contenu</h3><p>Jeux vidéo, culture gaming et création de contenu. Une passion que je développe aussi à travers mes projets en ligne.</p></article>
+        <article class="card reveal"><div class="card-head"><div class="iconbox">⌁</div><span class="card-number">03 — BUILD</span></div><h3>Code & technologie</h3><p>J’apprends à créer pour le web et à comprendre comment la technologie fonctionne. Prochaine étape : construire plus.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap about-grid">
+      <aside class="about-stamp reveal"><div class="mono">Identité / 001</div><div class="stamp">A&I.</div><p>Curieux par nature. Créatif par passion. En évolution constante.</p><div class="mono">Abidjan, Côte d’Ivoire</div></aside>
+      <div class="about-copy reveal"><div class="mono">02 / À propos</div><h2>Pas besoin d’avoir tout compris pour commencer.</h2><p>Je suis Abdel, un jeune créatif qui aime apprendre, tester et créer. Je m’intéresse au montage vidéo, aux jeux vidéo et au développement informatique. Ce portfolio est mon espace pour montrer mon parcours, mes essais et les projets que je construirai au fil du temps.</p><p>Mon objectif : transformer mes passions en compétences solides, continuer à apprendre et partager ce que je crée.</p><div class="chips"><span class="chip">CRÉATIVITÉ</span><span class="chip">CURIOSITÉ</span><span class="chip">APPRENTISSAGE</span><span class="chip">PERSÉVÉRANCE</span></div></div>
+    </div>
+  </section>
+  <section id="work">
+    <div class="wrap">
+      <div class="section-top reveal"><div><div class="mono">03 / Sélection</div><h2>Zone de projets<span style="color:var(--cyan)">.</span></h2></div><p>Quelques pistes pour présenter tes créations. Remplace les cartes par tes vrais projets, vidéos et liens quand tu es prêt.</p></div>
+      <div class="project-grid">
+        <article class="project reveal"><div class="project-visual"><div class="visual-grid"></div><div class="visual-type">KHASEUS<span>.</span></div></div><div class="project-info"><small>01 / Gaming & vidéo</small><h3>Khaseus Gaming</h3><p>Un espace dédié aux jeux vidéo et au contenu gaming. Ajoute ici ta chaîne, tes meilleures vidéos et tes projets préférés.</p></div></article>
+        <article class="project reveal"><div class="project-visual"><div class="visual-grid"></div><div class="visual-type">EDIT<span>/</span>LAB</div></div><div class="project-info"><small>02 / Création visuelle</small><h3>Video edits</h3><p>Une sélection de montages, transitions et expérimentations visuelles. Remplace ce texte par la description d’un vrai montage.</p></div></article>
+        <article class="project reveal"><div class="project-visual"><div class="visual-grid"></div><div class="visual-type">&lt;<span>code</span>/&gt;</div></div><div class="project-info"><small>03 / Développement</small><h3>Mes premiers projets web</h3><p>Le début de mon parcours dans le code : pages web, petites expériences et projets construits en apprenant.</p></div></article>
+        <article class="project reveal"><div class="project-visual"><div class="visual-grid"></div><div class="visual-type">NEXT<span>_</span></div></div><div class="project-info"><small>04 / À venir</small><h3>Le prochain chapitre</h3><p>Un emplacement libre pour la prochaine idée que tu décideras de transformer en quelque chose de concret.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="wrap"><div class="contact reveal"><div><div class="mono">04 / Contact</div><h2>On crée<br>quelque chose ?</h2><p>Tu veux discuter d’un projet, d’un montage ou simplement échanger ? Retrouve-moi sur mes réseaux ou écris-moi directement.</p></div><div class="contact-actions"><a class="btn primary" id="emailLink" href="mailto:ton-email@example.com">M’envoyer un e-mail ↗</a><a class="btn secondary" id="socialLink" href="#contact">Ajouter mes réseaux ↗</a></div></div></div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> <b>Abdel & I.</b> — Fait avec curiosité.</span><span>DES IDÉES. DU CODE. DE L’ÉVOLUTION. <span style="color:var(--cyan)">✳</span></span></div></footer>
+<script>
+  // Personnalise ces deux valeurs avec ton vrai e-mail et ton profil social.
+  const CONTACT_EMAIL = "ton-email@example.com";
+  const SOCIAL_URL = "";
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const emailLink = document.getElementById("emailLink");
+  if (CONTACT_EMAIL && CONTACT_EMAIL !== "ton-email@example.com") emailLink.href = "mailto:" + CONTACT_EMAIL;
+  const socialLink = document.getElementById("socialLink");
+  if (SOCIAL_URL) { socialLink.href = SOCIAL_URL; socialLink.target = "_blank"; socialLink.rel = "noopener noreferrer"; }
+  else socialLink.addEventListener("click", e => { e.preventDefault(); alert("Ouvre le fichier index.html et ajoute ton lien dans la variable SOCIAL_URL, en bas du fichier."); });
+  const toggle = document.getElementById("menuToggle"), nav = document.getElementById("navlinks");
+  toggle.addEventListener("click", () => { const opened = nav.classList.toggle("open"); toggle.setAttribute("aria-expanded", String(opened)); toggle.textContent = opened ? "✕" : "☰"; });
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { nav.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); toggle.textContent="☰"; }));
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}), {threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
